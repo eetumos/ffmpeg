@@ -24,7 +24,7 @@
 Summary:        A complete solution to record, convert and stream audio and video
 Name:           ffmpeg
 Version:        8.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv3+
 URL:            http://%{name}.org/
 Epoch:          1
@@ -33,7 +33,7 @@ Source0:        http://%{name}.org/releases/%{name}-%{version}.tar.xz
 
 # https://github.com/OpenVisualCloud/SVT-VP9/tree/master/ffmpeg_plugin
 Patch0:         %{name}-svt-vp9.patch
-# https://github.com/HandBrake/HandBrake/tree/c2e9183ce116bae1eb10ca796d271768132cf21a
+# https://github.com/HandBrake/HandBrake/tree/2f464fcf93d411ebdd969b39d67739ed658c5e58
 Patch1:         %{name}-HandBrake.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=2240127
 # Reference: https://crbug.com/1306560
@@ -677,6 +677,10 @@ mv doc/*.html doc/html
 %{_mandir}/man3/libswscale.3*
 
 %changelog
+* Fri May 22 2026 Simone Caronni <negativo17@gmail.com> - 1:8.1.1-2
+- Rebuild for updated dependencies.
+- Update HandBrake patches.
+
 * Mon May 04 2026 Simone Caronni <negativo17@gmail.com> - 1:8.1.1-1
 - Update to 8.1.1.
 - Drop DeckLink SDK patch.
