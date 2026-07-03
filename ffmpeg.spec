@@ -26,10 +26,10 @@ Name:           ffmpeg
 Version:        8.1.1
 Release:        2%{?dist}
 License:        LGPLv3+
-URL:            http://%{name}.org/
+URL:            https://%{name}.org/
 Epoch:          1
 
-Source0:        http://%{name}.org/releases/%{name}-%{version}.tar.xz
+Source0:        https://%{name}.org/releases/%{name}-%{version}.tar.xz
 
 # https://github.com/OpenVisualCloud/SVT-VP9/tree/master/ffmpeg_plugin
 Patch0:         %{name}-svt-vp9.patch
